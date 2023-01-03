@@ -1,4 +1,4 @@
-<a href="https://github.com/HyGamer2010/template-mod/releases/latest/download/SpaceMonkey.dll">
+<a href="https://github.com/HyGamer2010/SpaceMonkey/releases/latest/download/SpaceMonkey.dll">
     <img align="left" alt="Icon" height="90" src="Icon.png">
     <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
 </a>
