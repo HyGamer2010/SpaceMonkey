@@ -32,7 +32,7 @@ namespace SpaceMonkey
             towerModel.GetAttackModel().name = "Base";
             towerModel.GetWeapon().name = "Base";
             towerModel.range = 50;
-            towerModel.GetWeapon().rate = .5f;
+            towerModel.GetWeapon().rate = .6f;
             towerModel.GetWeapon().projectile.ApplyDisplay<ProjectileDisplay>();
             towerModel.GetWeapon().projectile.scale = 2;
         }

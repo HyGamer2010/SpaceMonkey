@@ -2,7 +2,7 @@
 
 public static class ModHelperData
 {
-    public const string Version = "1.0.0";
+    public const string Version = "1.1.0";
     public const string Name = "Space Monkey Mod";
 
     public const string Description = "The Space Monkey is here to save the day! Adds a tower themed around space";

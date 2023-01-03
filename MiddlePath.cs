@@ -26,8 +26,8 @@ namespace SpaceMonkey.Upgrades.Middle
         public override string Description => "Increases range";
         public override void ApplyUpgrade(TowerModel towerModel)
         {
-            towerModel.GetAttackModel().range += 10;
-            towerModel.range += 10;
+            towerModel.GetAttackModel().range += 5;
+            towerModel.range += 5;
         }
     }
     public class DarkMatter : ModUpgrade<SpaceMonkey>
@@ -58,34 +58,36 @@ namespace SpaceMonkey.Upgrades.Middle
         public override string Description => "The explosions are bigger";
         public override void ApplyUpgrade(TowerModel towerModel)
         {
-            towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.scale = 10;
+            towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.radius = 10;
         }
     }
     public class MeteorShower : ModUpgrade<SpaceMonkey>
     {
         public override int Path => MIDDLE;
         public override int Tier => 4;
-        public override int Cost => 18000;
+        public override int Cost => 22500;
         public override string Icon => nameof(MeteorShower);
         public override string Description => "Add a meteor shower ability";
         public override void ApplyUpgrade(TowerModel towerModel)
         {
             var behav = Game.instance.model.GetTower(TowerType.MortarMonkey, 0, 5, 0).Duplicate<TowerModel>().GetAbility();
-            behav.GetBehavior<ActivateAttackModel>().attacks[0].weapons[0].projectile.GetDamageModel().damage = 40;//fix dmg
+            behav.GetBehavior<ActivateAttackModel>().attacks[0].weapons[0].projectile.GetDamageModel().damage = 30;
             towerModel.AddBehavior<AbilityModel>(behav);
+            towerModel.GetAbility().icon = GetSpriteReference(Icon);
         }
     }
     public class PlanetaryDestruction : ModUpgrade<SpaceMonkey>
     {
         public override int Path => MIDDLE;
         public override int Tier => 5;
-        public override int Cost => 25000;
+        public override int Cost => 40000;
         public override string Icon => nameof(PlanetaryDestruction);
         public override string Description => "It came too close";
         public override void ApplyUpgrade(TowerModel towerModel)
         {
+            towerModel.RemoveBehavior<AbilityModel>();
             var behav = Game.instance.model.GetTower(TowerType.MonkeyAce, 0, 5, 0).Duplicate<TowerModel>().GetAbility();
-            behav.GetBehavior<ActivateAttackModel>().attacks[0].weapons[0].projectile.GetDamageModel().damage = 5000;
+            behav.GetBehavior<ActivateAttackModel>().attacks[0].weapons[0].projectile.GetDamageModel().damage = 4500;
             towerModel.AddBehavior<AbilityModel>(behav);
             foreach (var item in towerModel.GetAbilities())
             {
@@ -94,6 +96,7 @@ namespace SpaceMonkey.Upgrades.Middle
             towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetDamageModel().damage += 1;
             towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.scale += 15;
             towerModel.GetWeapon().projectile.GetDamageModel().damage += 1;
+            towerModel.GetAbility().icon = GetSpriteReference(Icon);
         }
     }
 }

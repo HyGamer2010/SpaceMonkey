@@ -88,7 +88,7 @@ namespace SpaceMonkey.Upgrades.Top
         public override string Description => "Too, many...";
         public override void ApplyUpgrade(TowerModel towerModel)
         {
-            towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 15, 0, 10, null, false);
+            towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 12, 0, 10, null, false);
             foreach (var item in towerModel.GetAttackModels())
             {
                 item.weapons[0].rate /= 1.5f;
