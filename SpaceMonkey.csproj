@@ -1,0 +1,126 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>TemplateMod</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>TemplateMod</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+
+    <Import Project="..\btd6.targets" />
+
+    <ItemGroup>
+      <None Remove="Resources\Planet.png" />
+      <None Remove="Resources\Spacemonkey.png" />
+      <None Remove="Resources\SpaceMonkeyTower - Copy.png" />
+      <None Remove="SpaceMonkey.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony">
+        <HintPath>..\..\..\MelonLoader\Dependencies\Il2CppAssemblyGenerator\0Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="BloonsTD6 Mod Helper">
+        <HintPath>..\..\..\Mods\Btd6ModHelper.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppAssemblyGenerator">
+        <HintPath>..\..\..\MelonLoader\Dependencies\Il2CppAssemblyGenerator\Il2CppAssemblyGenerator.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppDebugLog">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppDebugLog.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppFacebook.Unity.Settings">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppFacebook.Unity.Settings.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppFacepunch.Steamworks">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppFacepunch.Steamworks.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppInterop.HarmonySupport">
+        <HintPath>..\..\..\MelonLoader\Dependencies\Il2CppAssemblyGenerator\Il2CppInterop.HarmonySupport.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppInterop.Runtime">
+        <HintPath>..\..\..\MelonLoader\Dependencies\SupportModules\Il2CppInterop.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppMono.Security">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2Cppmscorlib">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNCalc">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNCalc.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNewtonsoft.Json">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNewtonsoft.Json.UnityConverters">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.UnityConverters.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNinjaKiwi.Common">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNinjaKiwi.Common.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNinjaKiwi.Common.Attribution">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNinjaKiwi.Common.Attribution.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNinjaKiwi.CT.API">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNinjaKiwi.CT.API.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppNinjaKiwi.LiNK">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppNinjaKiwi.LiNK.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppPurchasing.Common">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppPurchasing.Common.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppRegEdit">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppRegEdit.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSteam">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSteam.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Configuration">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Configuration.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Core">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Data">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Net.Http">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Net.Http.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Numerics">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Numerics.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Runtime.Serialization">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Xml">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Xml.Linq">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.Linq.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppTwitch">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppTwitch.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppUniWebView-CSharp">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppUniWebView-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="MelonLoader">
+        <HintPath>..\..\..\MelonLoader\net6\MelonLoader.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>
