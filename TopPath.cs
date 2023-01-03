@@ -65,7 +65,7 @@ namespace SpaceMonkey.Upgrades.Top
     {
         public override int Path => TOP;
         public override int Tier => 4;
-        public override int Cost => 3000;
+        public override int Cost => 5000;
         public override string Icon => nameof(EvenMoreMeteors);
         public override string Description => "Shoots 5 projectiles";
         public override void ApplyUpgrade(TowerModel towerModel)
