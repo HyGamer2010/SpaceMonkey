@@ -22,7 +22,7 @@ namespace SpaceMonkey
         public override int BottomPathUpgrades => 5;
         public override ParagonMode ParagonMode => ParagonMode.Base555;
         public override string Portrait => "SpaceMonkey";
-        public override int Cost => 650;
+        public override int Cost => 600;
         public override string BaseTower => TowerType.NinjaMonkey;
         public override TowerSet TowerSet => TowerSet.Primary;
         public override string Icon => "SpaceMonkey";
