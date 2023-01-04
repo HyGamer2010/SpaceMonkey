@@ -1,1 +1,1 @@
-Nerfed slightly
+Fixed compatibility issues
